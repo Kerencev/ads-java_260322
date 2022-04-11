@@ -8,8 +8,8 @@ public class TestMain4 {
 
     public static void main(String[] args) {
 //        testLinkedList();
-//        testHomeWork();
-        testIterator();
+        testHomeWork();
+//        testIterator();
     }
 
     private static void testLinkedList() {
@@ -47,31 +47,27 @@ public class TestMain4 {
     private static void testHomeWork() {
 
         SimpleLinkedListImpl<Integer> linkedList = new SimpleLinkedListImpl<>();
+        linkedList.insertFirst(1);
+        linkedList.insertFirst(2);
+        linkedList.insertFirst(3);
+        linkedList.insertFirst(4);
+        linkedList.insertFirst(5);
 
         //ДОЛЖНО РАБОТАТЬ!
-//        for (Integer value : linkedList) {
-//            System.out.println("value: " + value);
-//        }
+        for (Integer value : linkedList) {
+            System.out.println("value: " + value);
+        }
     }
 
 
     private static void testIterator() {
         List<Integer> linkedList = new java.util.LinkedList<>();
         Collections.addAll(linkedList, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+        linkedList.add(1);
 
-/*        for (Integer integer : linkedList) {
+       for (Integer integer : linkedList) {
             System.out.println(integer);
-        }*/
-
-        ListIterator<Integer> iterator = linkedList.listIterator();
-        //first:reset
-        while (iterator.hasNext()) {
-            Integer integer = iterator.next();
-            System.out.println(integer + " до него " + iterator.previous());
-            iterator.next();
-            if (!iterator.hasNext()) {
-                break;
-            }
         }
+
     }
 }
