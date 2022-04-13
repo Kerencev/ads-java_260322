@@ -3,7 +3,7 @@ package lesson4;
 import lesson3.queue.Queue;
 
 public class LinkedQueue<E> implements Queue<E> {
-    private final TwoSideLinkedList<E> data;
+    protected final TwoSideLinkedList<E> data;
 
     public LinkedQueue() {
         this.data = new TwoSideLinkedListImpl<>();
